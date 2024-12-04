@@ -1,0 +1,430 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/admin/dashboard">Admin</Link></li>
+        <li><Link to="/institute/dashboard">Institute</Link></li>
+        <li><Link to="/student/dashboard">Student</Link></li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Global Styles */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #007BFF;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  padding: 10px;
+}
+
+nav li a {
+  color: white;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  color: #d1e7ff;
+}
+
+/* Main Container Styles */
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 300px;
+}
+
+form button {
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 320px;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #357ab7;
+}
+
+form button:disabled {
+  background-color: #c1c1c1;
+  cursor: not-allowed;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #d9534f;
+  margin-top: -10px;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  margin-top: 20px;
+}
+
+.dashboard ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashboard li {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard li a {
+  color: #333;
+  font-size: 18px;
+}
+
+.dashboard ul li:hover {
+  background-color: #f8f9fa;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Admin, Institute, and Student Dashboard Styles */
+.admin-dashboard {
+  background-color: #f1f1f1;
+}
+
+.institute-dashboard {
+  background-color: #fff3cd;
+}
+
+.student-dashboard {
+  background-color: #d4edda;
+}
+
+/* Profile Styles */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-container .profile-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container .profile-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.profile-container .update-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-container .update-button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific Styling for Each Role */
+.admin-dashboard {
+  background-color: #f1f1f1;
+}
+
+.institute-dashboard {
+  background-color: #fff3cd;
+}
+
+.student-dashboard {
+  background-color: #d4edda;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Role-Specific Dashboard Background */
+.admin-dashboard {
+  background-color: #f1f1f1;
+}
+
+.institute-dashboard {
+  background-color: #fff3cd;
+}
+
+.student-dashboard {
+  background-color: #d4edda;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], button {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+
+
+
+import React, { useState } from 'react';
+
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        setError(data.message);
+        return;
+      }
+
+      const data = await response.json();
+      alert(`Welcome back, ${username}`);
+      // Redirect or manage user session here
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    }
+  };
+
+  return (
+    <div className="form-container">
+      <h2 className="form-title">Login</h2>
+      {error && <p className="error">{error}</p>}
+      <form className="form" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          placeholder="Username"
+          className="input"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="input"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="button" className="button" onClick={handleLogin}>
+          Login
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Login;
+
+
+import React, { useState } from 'react';
+
+const Register = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleRegister = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        setMessage(data.message || 'Registration failed');
+        return;
+      }
+
+      setMessage('Registration successful! Please log in.');
+    } catch (err) {
+      setMessage('Something went wrong. Please try again.');
+    }
+  };
+
+  return (
+    <div className="form-container">
+      <h2 className="form-title">Register</h2>
+      {message && <p className="message">{message}</p>}
+      <form className="form" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          placeholder="Username"
+          className="input"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="input"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="button" className="button" onClick={handleRegister}>
+          Register
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Register;

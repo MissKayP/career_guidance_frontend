@@ -1,0 +1,34 @@
+/* src/components/LandingPage.css */
+.landing-page {
+    background-image: url('../assets/background.jpg'); /* Incorrect method, won't work in CSS */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  .content {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .get-started-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5e00; /* Customize the button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #e14e00;
+  }
+  
